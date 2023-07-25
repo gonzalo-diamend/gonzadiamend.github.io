@@ -1,0 +1,23 @@
+/* Establecer el color de fondo negro para todo el sitio */
+body {
+    background-color: #000000;
+    color: #ffffff; /* Color del texto */
+  }
+  
+  /* Estilos para las secciones doradas */
+  section {
+    background-color: #ffd700; /* Color dorado */
+    padding: 80px 0; /* Espaciado interior superior e inferior de las secciones */
+    text-align: center; /* Centrar el contenido dentro de las secciones */
+  }
+  
+  /* Estilo para el texto de los enlaces de navegación en la barra de navegación */
+  .navbar-nav .nav-link {
+    color: #ffffff;
+  }
+  
+  /* Estilo para el texto de los enlaces de navegación activos (cuando se hace clic) */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #ffd700; /* Cambiar el color del texto activo a dorado */
+  }
+  
