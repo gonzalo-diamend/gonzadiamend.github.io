@@ -1,21 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>My Story</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Mi Historia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    body, main, footer {
+      background-color: #050404;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      line-height: 1.4; /* Reduced line height */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: gold; /* Slightly different shade for contrast */
+      color: #030303;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      flex: 1;
+    }
+    h2 {
+      color: #f0f0f0; /* Lighter color for subtitles */
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin: 10px 0; /* Reduced margin */
+    }
+    footer {
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .footer-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+    }
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    .footer-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+    .footer-icons a:hover {
+      color: #ddd;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
-<body style="background-color: black; color: white;">
+<body>
   <header>
     <h1>My Story</h1>
   </header>
   <main>
-    <p>I am a software engineer with a passion for building web applications. I am proficient in HTML, CSS, and JavaScript.</p>
-    <p>I have been working as a software engineer for the past 5 years, and I have worked on a variety of projects, including web applications, mobile applications, and desktop applications.</p>
-    <p>I am passionate about using technology to solve real-world problems. I believe that technology has the potential to make the world a better place, and I am committed to using my skills to make a positive impact.</p>
+    <h2>About Me</h2>
+    <p>My name is Gonzalo Diamend. I was born in January 1992 in Buenos Aires. My parents are Sandra and Fredy, and I have a sister named Victoria. I had a very happy childhood marked by the tough economic situation of Argentina in the 90s.
+      Since I was a child, I was interested in everything related to computers. The first game I had in my hands was the World Cup 1998. I was always very curious but did not feel that it was my vocation, I believed it was a hobby. 
+      In 2009, when I finished my studies, the twists of fate brought me to the place where it all began. I studied journalism, did various audiovisual projects, but since I started my first IT job in 2010, I knew this was what I wanted to do.
+      I am currently married to Antonella, and we live in Madrid with our dog Sheldon. 
+    </p>
+    
+    <h2>Hobbies</h2>
+    <p>I have worked as a software engineer for the past 5 years, participating in a variety of projects, including web, mobile, and desktop applications.</p>
+    
+    <h2>My Philosophy</h2>
+    <p>Passionate about leveraging technology to solve real-world problems. Committed to making a positive impact through technology. I have worked in quality in different technology companies. Since then, I have incorporated knowledge about testing and all the areas related to the product development cycle. I am passionate about what I do, I really enjoy the day-to-day in a software company.
+    
+      I have experience in all the quality cycles that make up the validation of new software: From the planning stage, with the creation of a test strategy, the formation of test cases, and the subsequent test plans. Then in the product validation stage with the different instances that are carried out: Regression test, Smoke test, bug fixing, or User Acceptance test. I have also gained knowledge in metrics and data analysis due to my leadership experience. I also have experience in automated testing: I have used various tools such as Puppeteer, Selenium, or Cypress to perform scripts for different projects. I also had the opportunity to perform testing on mobile devices or tablets using Android and iOS.
+      I spend a lot of time training in new technologies. I am aware that in the competitive industry we are in, we need to be updated with the latest trends in terms of new tools to streamline and be able to do a job with superior quality.</p>
+    
+      <button onclick="redirectToContact()">Contact me!</button>
+    
   </main>
   <footer>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/gonzalodiamend/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/gonzalo-diamend/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/gonzadiamend/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
     <p>Copyright &copy; 2023 Gonzalo Diamend - QA Automation Engineer</p>
   </footer>
+  <script>
+    function redirectToContact() {
+      // Asegúrate de que la URL es accesible y correcta
+      window.location.href = 'contact.html';
+    }
+  </script>
+  </script>
 </body>
 </html>
+
