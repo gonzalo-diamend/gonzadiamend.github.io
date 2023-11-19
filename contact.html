@@ -3,61 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
     body {
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    header {
-      text-align: center;
-      padding: 20px;
-    }
+header {
+  text-align: center;
+  padding: 20px;
+}
 
-    h1 {
-      color: gold;
-      font-size: 36px;
-    }
+h1 {
+  color: gold;
+  font-size: 36px;
+}
 
-    main {
-      padding: 20px;
-    }
+main {
+  padding: 20px;
+}
 
-    input[type="name"],
-    input[type="email"],
-    textarea {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid white;
-      background-color: transparent;
-      color: white;
-    }
+input[type="name"],
+input[type="email"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  background-color: black; /* Fondo negro para los campos de entrada */
+  color: white; /* Texto blanco para los campos de entrada */
+}
 
-    input[type="submit"] {
-      background-color: gold;
-      color: black;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
+input[type="submit"] {
+  background-color: gold;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-    input[type="submit"]:hover {
-      background-color: white;
-      color: black;
-    }
+input[type="submit"]:hover {
+  background-color: white; /* Cambio a blanco para contraste al pasar el cursor */
+  color: black;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-    }
+footer {
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+.footer-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.footer-icons a:hover {
+  color: #ddd;
+}
 
-    footer p {
-      color: white;
-    }
   </style>
 </head>
 <body>
@@ -66,14 +78,19 @@
   </header>
   <main>
     <p>If you would like to contact me, please use the form below.</p>
-    <form action="contact.php" method="post">
+    <form action="https://formspree.io/f/xrgwvrge" method="POST">
       <input type="name" name="name" placeholder="Your name">
       <input type="email" name="email" placeholder="Your email">
       <textarea name="message" placeholder="Your message"></textarea>
-      <input type="submit" value="Submit">
+      <button type="submit">Send</button>
     </form>
   </main>
   <footer>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/gonzalodiamend/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/gonzalo-diamend/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/gonzadiamend/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
     <p>Copyright &copy; 2023 Gonzalo Diamend - QA Automation Engineer</p>
   </footer>
 </body>

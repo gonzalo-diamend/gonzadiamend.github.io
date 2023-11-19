@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Articles</title>
+  <title>Other Experiences</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
     body, main, footer {
@@ -24,20 +24,15 @@
       padding: 1rem 0;
       text-align: center;
     }
-    main h2 {
-  color: white; /* Cambia el color del texto de los títulos a blanco */
-}
-a {
-  text-decoration-color: white; /* Solo cambia el color del subrayado a blanco */
-}
-
-/* O si quieres definir completamente la decoración de texto */
-a {
-  text-decoration: underline white; /* Establece el subrayado y el color a blanco */
-}
-main p {
-  color: white; /* Cambia el color del texto de los resúmenes a blanco */
-}
+    main {
+      padding: 20px;
+      flex: 1;
+    }
+    h2 {
+      color: #f0f0f0; /* Lighter color for subtitles */
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
     p {
       margin: 10px 0; /* Reduced margin */
     }
@@ -74,24 +69,21 @@ main p {
 </head>
 <body>
   <header>
-    <h1>Articles</h1>
+    <h1>Other Experiences</h1>
   </header>
   <main>
-    <ul class="article-list">
-      <li>
-        <a href="article1.html">
-          <h2>7 Golden Rules for Test Automation in QA</h2>
-          <p>November 2022 - Rootstrap Blog</p>
-        </a>
-      </li>
-      <li>
-        <a href="article2.html">
-          <h2>Titulo del Artículo 2</h2>
-          <p>Resumen del artículo 2...</p>
-        </a>
-      </li>
-      <!-- Agrega más artículos aquí -->
-    </ul>
+    <h2>Testing teacher</h2>
+    <p>
+    </p>
+    
+    <h2>Certifications</h2>
+    <p></p>
+    
+    <h2>Courses</h2>
+    <p></p>
+    
+      <button onclick="redirectToContact()">Contactame!</button>
+    <p id="surpriseMessage" style="display:none; color: blue;">¡Sigue con el buen trabajo y continúa aprendiendo!</p>
   </main>
   <footer>
     <div class="footer-icons">
@@ -101,5 +93,12 @@ main p {
     </div>
     <p>Copyright &copy; 2023 Gonzalo Diamend - QA Automation Engineer</p>
   </footer>
+  <script>
+    function redirectToContact() {
+      // Asegúrate de que la URL es accesible y correcta
+      window.location.href = 'contact.html';
+    }
+  </script>
+  </script>
 </body>
 </html>

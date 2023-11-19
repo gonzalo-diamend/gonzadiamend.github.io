@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>7 Golden Rules for Test Automation in QA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    body, main, footer {
+      background-color: #050404;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: gold;
+      color: #030303;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      flex: 1;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.75em;
+      color: #ffffff;
+      font-weight: bold;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin-bottom: 1em;
+      text-align: justify;
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    .contact-button {
+      background-color: gold;
+      color: #050404;
+      border: none;
+      padding: 10px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .contact-button:hover {
+      background-color: #fff;
+      color: #050404;
+      transform: scale(1.05);
+    }
+    .contact-button:active {
+      transform: scale(0.95);
+    }
+    footer {
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  display: flex; /* Activa Flexbox */
+  flex-direction: column; /* Alinea los elementos en columnas */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.footer-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  color: #ddd;
+}
+    @media (max-width: 600px) {
+      main {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>7 Golden Rules for Test Automation in QA</h1>
+  </header>
+  <main>
+    <h2>November 2022 - Gonzalo Diamend</h2>
+
+    <p>In recent years, automating software quality tests has become widely popular in the tech industry. Current automation tools allow us to confirm that a product meets predefined quality standards for code style, functionality, and user experience.</p>
+    
+    <p>With these tools, companies have witnessed significant improvements in quality assurance processes. Although every company may implement its automation tools differently, specific rules can help a team achieve the most success with automation.</p>
+    
+    <p>This article will discuss how the following golden rules of automation testing can reduce project costs and improve product quality.</p>
+    
+    <h3>When to Automate Testing</h3>
+    <p>Before we look at the rules, we must first understand when to automate testing. Although automation can improve the overall quality assurance process, there are projects we cannot recommend for automation.</p>
+    
+    <p>Projects that change often and dramatically may result in high script maintenance costs if automated. Moreover, the initial automation setup costs can be expensive. So, if a project requires regular changes to its automation scripts, automated testing may be outside the budget.</p>
+    
+    <h3>7 Rules for Test Automation</h3>
+    <h4>1- Begin with Strategy</h4>
+    <p>Every successful project starts with a strong strategy. A comprehensive test automation strategy requires us to know the scope of our project and compare different testing requirements.</p>
+    
+    <p>QA teams should evaluate their testing priorities according to available resources and potential risks. Afterward, they should develop a strategy that best meets their needs.</p>
+    
+    <h4>2- Pick the Right Tools</h4>
+    <p>Automation testing relies on a variety of automation tools. As different companies have different approaches to software development, automation testers must determine which tools best fit a project's testing strategy.</p>
+    
+    <p>Fortunately, we have a lot of great tools to choose from, including front- and back-end testing frameworks, mobile app frameworks, and various testing libraries. The right tools can support our coding practices and help us fulfill a company's validation requirements.</p>
+    
+    <h4>3- Set up an Automation Environment</h4>
+    <p>We can begin implementing the tools and strategy discussed above in the automation environment. Test development can sometimes be unpredictable, and a stable testing environment is essential for successful test automation.</p>
+    
+    <p>The automation environment also helps us collect valuable data from our test scenarios. For consistency, the development and test environment should be identical to the staging and production environments.</p>
+    
+    <h4>4- Do Not Neglect Manual Testing</h4>
+    <p>A common myth with automation testing is that 100% coverage is possible. Yet, the truth is that attaining such coverage requires a finished product to be under maintenance for a very long time.</p>
+    
+    <p>Any company continuously deploying new releases and features will struggle to reach 100% coverage, but it can still produce high-quality products.</p>
+    
+    <p>Using a blend of automation and manual testing, QA engineers can evaluate every vital aspect of a product to ensure a great customer experience.</p>
+    
+    <h4>5- Use Locators Liberally</h4>
+    <p>Successful automation relies on paths, called locators, that connect our scripts with the elements of an application. Testing scripts can click on links, open dropdowns, close pop-ups, and more because of locators.</p>
+    
+    <p>Developers and QA engineers create locators by adding CSS or XPATH IDs to every crucial element in the application. With more locators in an application, automated scripts can evaluate a product more thoroughly.</p>
+    
+    <h4>6- Run, Check, Fix and Run again</h4>
+    <p>If automated correctly, a system will perform all the necessary tests for us and produce a report. However, automated testing only benefits development teams if they use the results effectively.</p>
+    
+    <p>Every team should have procedures for analyzing failing test cases and organizing follow-up actions to fix detected defects. Usually, the time testers need to fix a bug after discovering it takes longer than initially anticipated.</p>
+    
+    <p>One of the best advantages of test automation is its rapid feedback during the early stages of the development lifecycle when developers require less time to fix bugs. With a well-defined process that prioritizes early testing, software development teams can save time and resources if conflicts arise when refining the application.</p>
+    
+    <h4>7- Design Pattern is a must</h4>
+    <p>The QA team must determine the correct design pattern when creating an automation framework for a project. Different projects will use specific patterns depending on the company's goals and strategy.</p>
+    
+    <p>Choosing the ideal design pattern, such as Singleton, Page Object Model, or many others, can help a team create an automation framework aligned with the project's goals.</p>
+    
+    <p>To determine which pattern works best,we must first do the following: 
+
+        - Understand the project's timeline
+        - Ensure the company's strategy is complete
+        - Understand how the company plans to scale a project
+        - Evaluate how familiar developers and QA engineers are with the design patterns and strategies
+        
+        <h3>What to take away</h3>
+        <p>Automation also improves as technology improves, providing us with new tools to develop high-quality products. Now, many companies include automation testing as an essential step in their QA process. 
+        
+            Following the golden rules above, QA teams can develop a successful automation strategy and create a robust testing environment to help make the highest quality products possible.</p>
+    
+    <button onclick="redirectToContact()" class="contact-button">Back to Articles!</button>
+    
+  </main>
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/gonzalodiamend/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/gonzalo-diamend/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/gonzadiamend/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>Copyright &copy; 2023 Gonzalo Diamend - QA Automation Engineer</p>
+  </footer>
+  <script>
+    function redirectToContact() {
+      // Asegúrate de que la URL es accesible y correcta
+      window.location.href = 'articles.html';
+    }
+  </script>
+  </script>
+</body>
+</html>
