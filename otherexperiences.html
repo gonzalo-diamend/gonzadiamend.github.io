@@ -185,8 +185,10 @@
   <main>
     <h2>Testing teacher</h2>
     <p>
+      I worked as a main teacher in the Tech Developer certification provided by Digital House. My responsibilities were to give the class 4 times a week, generate the material and carry out the respective evaluations for the students. 
+      Personally, it was an extremely rewarding job where I was able to teach the profession that I am passionate about and do it with a group of enthusiastic young people who are looking to enter the tech world.
     </p>
-    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwCJzzu9BKAy68TqM6VkSgrSAXSGtIUXo9kFjEGuqP1UnyQPfU8pMFwh5C0jFUzZoYoUQ&usqp=CAU" alt="Digital House logo">
     <h2>Certifications</h2>
     <p></p>
     
@@ -205,26 +207,28 @@
   </footer>
   <script>
     function redirectToContact() {
-      window.location.href = 'contact.html'; // Cambia por la URL de tu página de contacto.
+      const contactUrl = 'contact.html'; // Replace with the URL of your contact page.
+      window.location.href = contactUrl;
     }
     function toggleDropdown() {
-    var dropdown = document.getElementById("dropdown");
-    if (dropdown.style.display === "none" || dropdown.style.display === "") {
-      dropdown.style.display = "block";
-      document.body.classList.add("menu-open");
-    } else {
-      dropdown.style.display = "none";
-      document.body.classList.remove("menu-open");
+      const dropdown = document.getElementById("dropdown");
+      const isHidden = dropdown.style.display === "none" || dropdown.style.display === "";
+    
+      dropdown.style.display = isHidden ? "block" : "none";
+      document.body.classList.toggle("menu-open", !isHidden);
     }
-  }
     window.onclick = function(event) {
-    if (!event.target.matches('.hamburger-menu') && document.body.classList.contains('menu-open')) {
-      var dropdown = document.getElementById("dropdown");
-      dropdown.style.display = "none";
-      document.body.classList.remove("menu-open");
+      const isHamburgerMenu = event.target.matches('.hamburger-menu');
+      const isMenuOpen = document.body.classList.contains('menu-open');
+      
+      if (!isHamburgerMenu && isMenuOpen) {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.style.display = "none";
+        document.body.classList.remove("menu-open");
+      }
     }
-}
-  </script>
+      
+      </script>
   </script>
 </body>
 </html>
