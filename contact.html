@@ -5,21 +5,145 @@
   <title>Contact</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
+    body, main, footer {
+      background-color: #050404;
+    }
     body {
-  background-color: black;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #bea060;
+      color: #030303;
+      padding: 1rem 0;
+      text-align: center;
+      position: relative; /* Agregado para posicionamiento absoluto del menú */
+    }
+   
+    .menu-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      z-index: 1000; /* Asegúrate de que el menú esté sobre otros elementos */
+    }
 
-header {
-  text-align: center;
-  padding: 20px;
-}
+    .hamburger-menu {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 3rem; /* Ajusta la altura del menú de hamburguesa */
+      padding: 0.5rem; /* Espacio alrededor para facilitar el clic */
+      background: #bea060; /* Color de fondo del botón de menú */
+      border: none; /* Elimina el borde si hay alguno */
+      border-radius: 0.25rem; /* Esquinas redondeadas */
+    }
 
-h1 {
-  color: gold;
-  font-size: 36px;
-}
+    .hamburger-menu div {
+      height: 3px;
+      background: #030303; /* Color de las barras */
+      width: 30px; /* Ancho de las barras */
+      transition: 0.4s;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 5rem; /* Ajusta este valor para alinear con el menú de hamburguesa */
+      left: 0;
+      background-color: #fff; /* Fondo más claro para el menú */
+      min-width: 200px; /* Ancho mínimo del menú */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 999; /* Justo debajo del menú de hamburguesa */
+    }
+
+    .dropdown-content a {
+      color: #050404; /* Texto más oscuro para mejor contraste */
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd; /* Resalta los ítems al pasar el mouse */
+    }
+
+    .dropdown-content a.current-page {
+      background-color: #bea060; /* Color de fondo para el ítem de la página actual */
+      pointer-events: none; /* Desactiva la funcionalidad de clic */
+      cursor: default;
+    }
+
+    main {
+      padding: 20px;
+      flex: 1;
+      max-width: 800px; /* Controla el ancho máximo del contenido principal */
+      margin: auto; /* Centra el main en la página */
+    }
+    h2 {
+      color: #f0f0f0;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    footer {
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    .footer-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+    .footer-icons a:hover {
+      color: #ddd;
+    }
+    /* Estilos del botón de contacto */
+    .contact-button {
+      background-color: #bea060;
+      color: #050404;
+      border: none;
+      padding: 10px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+      align-self: center; /* Centra el botón en Flexbox */
+      margin-top: 20px;
+    }
+    .contact-button:hover {
+      background-color: #fff;
+      color: #050404;
+      transform: scale(1.05);
+    }
+    .contact-button:active {
+      transform: scale(0.95);
+    }
+    
 
 main {
   padding: 20px;
@@ -74,6 +198,22 @@ footer {
 </head>
 <body>
   <header>
+    <div class="menu-container">
+      <div class="hamburger-menu" onclick="toggleDropdown()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="dropdown-content" id="dropdown">
+        <a href="index.html">Home</a>
+        <a href="mystory.html" >My Story</a>
+        <a href="Projects.html">Projects</a>
+        <a href="otherexperiences.html">Other Experiences</a>
+        <a href="upcomingevents.html">Events</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="articles.html" >Articles</a>
+      </div>
+    </div>
     <h1>Contact</h1>
   </header>
   <main>
@@ -82,7 +222,7 @@ footer {
       <input type="name" name="name" placeholder="Your name">
       <input type="email" name="email" placeholder="Your email">
       <textarea name="message" placeholder="Your message"></textarea>
-      <button type="submit">Send</button>
+      <button type="submit" class="contact-button">Send</button>
     </form>
   </main>
   <footer>
@@ -93,5 +233,25 @@ footer {
     </div>
     <p>Copyright &copy; 2023 Gonzalo Diamend - QA Automation Engineer</p>
   </footer>
+  <script>
+    function toggleDropdown() {
+    var dropdown = document.getElementById("dropdown");
+    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+      dropdown.style.display = "block";
+      document.body.classList.add("menu-open");
+    } else {
+      dropdown.style.display = "none";
+      document.body.classList.remove("menu-open");
+    }
+  }
+    window.onclick = function(event) {
+    if (!event.target.matches('.hamburger-menu') && document.body.classList.contains('menu-open')) {
+      var dropdown = document.getElementById("dropdown");
+      dropdown.style.display = "none";
+      document.body.classList.remove("menu-open");
+    }
+}
+  
+  </script>
 </body>
 </html>
