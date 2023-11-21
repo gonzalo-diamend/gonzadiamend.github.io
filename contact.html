@@ -235,23 +235,23 @@ footer {
   </footer>
   <script>
     function toggleDropdown() {
-    var dropdown = document.getElementById("dropdown");
-    if (dropdown.style.display === "none" || dropdown.style.display === "") {
-      dropdown.style.display = "block";
-      document.body.classList.add("menu-open");
-    } else {
-      dropdown.style.display = "none";
-      document.body.classList.remove("menu-open");
+      const dropdown = document.getElementById("dropdown");
+      const isHidden = dropdown.style.display === "none" || dropdown.style.display === "";
+    
+      dropdown.style.display = isHidden ? "block" : "none";
+      document.body.classList.toggle("menu-open", !isHidden);
     }
-  }
     window.onclick = function(event) {
-    if (!event.target.matches('.hamburger-menu') && document.body.classList.contains('menu-open')) {
-      var dropdown = document.getElementById("dropdown");
-      dropdown.style.display = "none";
-      document.body.classList.remove("menu-open");
+      const isHamburgerMenu = event.target.matches('.hamburger-menu');
+      const isMenuOpen = document.body.classList.contains('menu-open');
+      
+      if (!isHamburgerMenu && isMenuOpen) {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.style.display = "none";
+        document.body.classList.remove("menu-open");
+      }
     }
-}
-  
-  </script>
+      
+      </script>
 </body>
 </html>

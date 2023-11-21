@@ -184,14 +184,67 @@
   </header>
   <main>
     <h2>Testing teacher</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwCJzzu9BKAy68TqM6VkSgrSAXSGtIUXo9kFjEGuqP1UnyQPfU8pMFwh5C0jFUzZoYoUQ&usqp=CAU" alt="Digital House logo">
     <p>
+      I worked as a main teacher in the Tech Developer certification provided by Digital House. My responsibilities were to give the class 4 times a week, generate the material and carry out the respective evaluations for the students. 
+      Personally, it was an extremely rewarding job where I was able to teach the profession that I am passionate about and do it with a group of enthusiastic young people who are looking to enter the tech world.
     </p>
+
+    <h2>Formal Education</h2>
+    <p> <h3>National Technology University</h3>
+      <img src="https://www.frba.utn.edu.ar/wp-content/uploads/2023/08/Logos-UTN.BA-cs6-fondo-blanco.png" alt="UTN logo">
+      <h4>Professional Testing Master in Quality Assurance</h4>
+      (2016 - 2017)
+      I was graduated as Test Manager certification in UTN (National Techonlogy University) I obtained knowledge in different stages, processes and tools that in the whole QA field.I was graduated as Test Manager certification in UTN (National Techonlogy University.) I obtained knowledge in different stages, processes and tools that in the whole QA field.
+      <h3>T.E.A</h3>
+      <img src="https://www.fundacionkonex.org/custom/web/data/imagenes/repositorio/2010/6/1/2678/20160316122818b887d8d5e65ac4dec3934028fe23ad72.jpg" alt="TEA logo">
+      <h4>Superior Tecnique in Social Communication</h4> 
+      (2010 - 2012)
+      Graduated as Superior Technique in Journalism and social communication. </p>
     
-    <h2>Certifications</h2>
-    <p></p>
+    <h2>Courses & Certifications</h2>
+    <h3>Test Automation University</h3>
+    <img src="https://avatars.githubusercontent.com/u/43864972?s=280&v=4" alt="TAU logo">
+    <p>
+      <p> - Introduction to Playwright (Oct. 2023)    </p>
+      <p> - API Test Automation with Postman (Mar. 2022)  </p>
+     <p>- Test Automation for Accessibility (Mar. 2022)</p> 
+     <p>- Continuous integration with Jenkins (Jul. 2021)</p>
+     <p>- Test Automation in DevOps (Jul. 2021)</p>
+     <p>- API Testing in Java Script (Jun. 2021)/p> 
+     <p>- Advanced Cypress (May. 2021)</p>
+     <p>- Introduction to Java Script (Feb. 2021)</p>
+     <p>- Source control for Test Automation (Feb. 2021)</p>
+     <p>- Cucumber with Java Script (Jul. 2020)</p>
+     <p>- IntelliJ for Test Automation (Jun. 2020)</p>
+     <p>- Exploring service APIs through Test Automation (May. 2020)</p>
+     <p>- Automating in the browser using Java Script (Abr. 2020)</p> 
+     <p>- Web Element locator strategy (Abr. 2020)</p>
+     <p>- AI for Element selection: Erasing the pain of fragile Test Scripts (Mar. 2020)</p>
+     <p>- Introduction to CypressIO (Mar. 2020)</p>
+     <p>- Mocha Java Script test framework (Mar. 2020)</p>
+     <p>- Introduction to Chai Asserti (Mar. 2020)</p>
+     <p>- Jest Java Script testing Framework (Dic. 2019)</p>
+     <p>- Modern Functional Test Automation through visual AI (Dec. 2019)</p>
+     <p>- Open house (May. 2019)</p>
+     <p>- Setting a foundation for successful test automation(May. 2019)</p> 
+    </p>
+    <h3>University of Leeds</h3>
+    <img src="https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1442815295/jpiq3z81atbe0uz0jk2s.jpg" alt="leeds logo">
     
-    <h2>Courses</h2>
-    <p></p>
+    <p>
+      <p></p>- Learn to code (Jun. 2020)
+    </p>
+    <h3>Udemy</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM6xqyU1AEKXqoje6BzpjzcZkqIcoRdM500znOHBVOMltHVpp3nALHkS4h3d0ebAurxfE&usqp=CAU" alt="udemy logo">
+
+    <p>
+      <p>- The Complete Splunk Beginner Course (Abr. 2020)</p>
+      <p>- DevOps: CI/CD with Jenkins pipelines, Maven, Gradle (Abr. 2020)</p>
+      <p>- Smart Communication (Aug. 2019)</p>
+      <p>- Authoring Elegant and Meaningful Agile User Stories (May. 2018)</p>
+
+    </p>
     
     <button onclick="redirectToContact()" class="contact-button">Contact me!</button>
   </main>
@@ -205,26 +258,28 @@
   </footer>
   <script>
     function redirectToContact() {
-      window.location.href = 'contact.html'; // Cambia por la URL de tu página de contacto.
+      const contactUrl = 'contact.html'; // Replace with the URL of your contact page.
+      window.location.href = contactUrl;
     }
     function toggleDropdown() {
-    var dropdown = document.getElementById("dropdown");
-    if (dropdown.style.display === "none" || dropdown.style.display === "") {
-      dropdown.style.display = "block";
-      document.body.classList.add("menu-open");
-    } else {
-      dropdown.style.display = "none";
-      document.body.classList.remove("menu-open");
+      const dropdown = document.getElementById("dropdown");
+      const isHidden = dropdown.style.display === "none" || dropdown.style.display === "";
+    
+      dropdown.style.display = isHidden ? "block" : "none";
+      document.body.classList.toggle("menu-open", !isHidden);
     }
-  }
     window.onclick = function(event) {
-    if (!event.target.matches('.hamburger-menu') && document.body.classList.contains('menu-open')) {
-      var dropdown = document.getElementById("dropdown");
-      dropdown.style.display = "none";
-      document.body.classList.remove("menu-open");
+      const isHamburgerMenu = event.target.matches('.hamburger-menu');
+      const isMenuOpen = document.body.classList.contains('menu-open');
+      
+      if (!isHamburgerMenu && isMenuOpen) {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.style.display = "none";
+        document.body.classList.remove("menu-open");
+      }
     }
-}
-  </script>
+      
+      </script>
   </script>
 </body>
 </html>

@@ -126,14 +126,17 @@
       background-color: #bea060;
       color: #050404;
       border: none;
-      padding: 10px 20px;
+      padding: 12px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 1em;
       cursor: pointer;
       border-radius: 5px;
       transition: background-color 0.3s, transform 0.3s;
       align-self: center; /* Centra el botón en Flexbox */
-      margin-top: 20px;
+      margin-top: 15px;
+      width: 100%;
+   
+
     }
     .contact-button:hover {
       background-color: #fff;
@@ -185,10 +188,10 @@
   </header>
   <main>
     <h2>About Me</h2>
-    <p>My name is Gonzalo Diamend. I was born in January 1992 in Buenos Aires. My parents are Sandra and Fredy, and I have a sister named Victoria. I had a very happy childhood marked by the tough economic situation of Argentina in the 90s.
-      Since I was a child, I was interested in everything related to computers. The first game I had in my hands was the World Cup 1998. I was always very curious but did not feel that it was my vocation, I believed it was a hobby. 
-      In 2009, when I finished my studies, the twists of fate brought me to the place where it all began. I studied journalism, did various audiovisual projects, but since I started my first IT job in 2010, I knew this was what I wanted to do.
-      I am currently married to Antonella, and we live in Madrid with our dog Sheldon. 
+    <p>My name is Gonzalo Diamend. I was born in January 1992 in Buenos Aires. My parents are Sandra and Freddie and I have a sister named Victoria. I had a very happy childhood, which was characterized by the difficult economic situation in Argentina in the nineties.
+      When I was a kid, I was interested in everything to do with computers. The first game I played was the 1998 World Cup. I was always curious, but I didn't feel like it was my calling. I believed it was a hobby.
+      In 2009, when I was finishing my studies, destiny called me to the place where it all began. I studied journalism and worked on various audiovisual projects, but since starting my first IT job in 2010 I knew this was what I wanted to do.
+      I am currently married to Antonella and we live in Madrid with our dog Sheldon.
     </p>
     
     <h2>Hobbies</h2>
@@ -213,27 +216,28 @@
   </footer>
   <script>
     function redirectToContact() {
-      window.location.href = 'contact.html'; // Cambia por la URL de tu página de contacto.
+      const contactUrl = 'contact.html'; // Replace with the URL of your contact page.
+      window.location.href = contactUrl;
     }
     function toggleDropdown() {
-    var dropdown = document.getElementById("dropdown");
-    if (dropdown.style.display === "none" || dropdown.style.display === "") {
-      dropdown.style.display = "block";
-      document.body.classList.add("menu-open");
-    } else {
-      dropdown.style.display = "none";
-      document.body.classList.remove("menu-open");
+      const dropdown = document.getElementById("dropdown");
+      const isHidden = dropdown.style.display === "none" || dropdown.style.display === "";
+    
+      dropdown.style.display = isHidden ? "block" : "none";
+      document.body.classList.toggle("menu-open", !isHidden);
     }
-  }
     window.onclick = function(event) {
-    if (!event.target.matches('.hamburger-menu') && document.body.classList.contains('menu-open')) {
-      var dropdown = document.getElementById("dropdown");
-      dropdown.style.display = "none";
-      document.body.classList.remove("menu-open");
+      const isHamburgerMenu = event.target.matches('.hamburger-menu');
+      const isMenuOpen = document.body.classList.contains('menu-open');
+      
+      if (!isHamburgerMenu && isMenuOpen) {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.style.display = "none";
+        document.body.classList.remove("menu-open");
+      }
     }
-}
-  
-  </script>
+      
+      </script>
 </body>
 </html>
 
