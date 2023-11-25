@@ -18,6 +18,12 @@
       flex-direction: column;
       min-height: 100vh;
     }
+    main img {
+      max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+      height: auto; /* Mantiene la proporción de aspecto original */
+      display: block; /* Hace que la imagen sea un bloque para centrarla */
+      margin: auto; /* Centra la imagen horizontalmente */
+    }
     header {
       background:#bea060; /* Slightly different shade for contrast */
       color: #030303;
@@ -52,7 +58,7 @@
       margin-bottom: 0.5em;
     }
     .contact-button {
-      background-color: gold;
+      background-color:#bea060;
       color: #050404;
       border: none;
       padding: 10px 20px;
@@ -114,7 +120,8 @@
     <h1>7 Golden Rules for Test Automation in QA</h1>
   </header>
   <main>
-    <h2>November 2022 - Gonzalo Diamend</h2>
+    <img src="https://assets-global.website-files.com/63f902d79a33f7ff016cde0b/63f902d89a33f7608d6ce713_6390a0fd364473f60ae9b403_shutterstock_2131783309.jpeg" alt="Article1 logo">
+
 
     <p>In recent years, automating software quality tests has become widely popular in the tech industry. Current automation tools allow us to confirm that a product meets predefined quality standards for code style, functionality, and user experience.</p>
     
@@ -178,6 +185,8 @@
         <p>Automation also improves as technology improves, providing us with new tools to develop high-quality products. Now, many companies include automation testing as an essential step in their QA process. 
         
             Following the golden rules above, QA teams can develop a successful automation strategy and create a robust testing environment to help make the highest quality products possible.</p>
+
+            <h2>November 2022 - Gonzalo Diamend</h2>
     
     <button onclick="redirectToContact()" class="contact-button">Back to Articles!</button>
     
