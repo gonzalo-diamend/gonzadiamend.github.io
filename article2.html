@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>7 Golden Rules for Test Automation in QA</title>
+  <title>QA: Using Locators for Test Automation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
     body, main, footer {
@@ -17,6 +17,12 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+    }
+    main img {
+      max-width: 50%; /* Ajusta el ancho máximo al 100% del contenedor */
+      height: auto; /* Mantiene la proporción de aspecto original */
+      display: block; /* Hace que la imagen sea un bloque para centrarla */
+      margin: auto; /* Centra la imagen horizontalmente */
     }
     header {
       background:#bea060; /* Slightly different shade for contrast */
@@ -52,7 +58,7 @@
       margin-bottom: 0.5em;
     }
     .contact-button {
-      background-color: gold;
+      background-color:#bea060; 
       color: #050404;
       border: none;
       padding: 10px 20px;
@@ -111,75 +117,88 @@
 </head>
 <body>
   <header>
-    <h1>7 Golden Rules for Test Automation in QA</h1>
+    <h1>QA: Using Locators for Test Automation</h1>
   </header>
   <main>
-    <h2>November 2022 - Gonzalo Diamend</h2>
+    <img src="https://assets-global.website-files.com/63f902d79a33f7ff016cde0b/6453f5943ac6e6e2da111871_6448142dcc97fc4184b38a2e_Automation.jpeg" alt="Article2 logo">   
 
     <p>In recent years, automating software quality tests has become widely popular in the tech industry. Current automation tools allow us to confirm that a product meets predefined quality standards for code style, functionality, and user experience.</p>
-    
-    <p>With these tools, companies have witnessed significant improvements in quality assurance processes. Although every company may implement its automation tools differently, specific rules can help a team achieve the most success with automation.</p>
-    
-    <p>This article will discuss how the following golden rules of automation testing can reduce project costs and improve product quality.</p>
-    
-    <h3>When to Automate Testing</h3>
-    <p>Before we look at the rules, we must first understand when to automate testing. Although automation can improve the overall quality assurance process, there are projects we cannot recommend for automation.</p>
-    
-    <p>Projects that change often and dramatically may result in high script maintenance costs if automated. Moreover, the initial automation setup costs can be expensive. So, if a project requires regular changes to its automation scripts, automated testing may be outside the budget.</p>
-    
-    <h3>7 Rules for Test Automation</h3>
-    <h4>1- Begin with Strategy</h4>
-    <p>Every successful project starts with a strong strategy. A comprehensive test automation strategy requires us to know the scope of our project and compare different testing requirements.</p>
-    
-    <p>QA teams should evaluate their testing priorities according to available resources and potential risks. Afterward, they should develop a strategy that best meets their needs.</p>
-    
-    <h4>2- Pick the Right Tools</h4>
-    <p>Automation testing relies on a variety of automation tools. As different companies have different approaches to software development, automation testers must determine which tools best fit a project's testing strategy.</p>
-    
-    <p>Fortunately, we have a lot of great tools to choose from, including front- and back-end testing frameworks, mobile app frameworks, and various testing libraries. The right tools can support our coding practices and help us fulfill a company's validation requirements.</p>
-    
-    <h4>3- Set up an Automation Environment</h4>
-    <p>We can begin implementing the tools and strategy discussed above in the automation environment. Test development can sometimes be unpredictable, and a stable testing environment is essential for successful test automation.</p>
-    
-    <p>The automation environment also helps us collect valuable data from our test scenarios. For consistency, the development and test environment should be identical to the staging and production environments.</p>
-    
-    <h4>4- Do Not Neglect Manual Testing</h4>
-    <p>A common myth with automation testing is that 100% coverage is possible. Yet, the truth is that attaining such coverage requires a finished product to be under maintenance for a very long time.</p>
-    
-    <p>Any company continuously deploying new releases and features will struggle to reach 100% coverage, but it can still produce high-quality products.</p>
-    
-    <p>Using a blend of automation and manual testing, QA engineers can evaluate every vital aspect of a product to ensure a great customer experience.</p>
-    
-    <h4>5- Use Locators Liberally</h4>
-    <p>Successful automation relies on paths, called locators, that connect our scripts with the elements of an application. Testing scripts can click on links, open dropdowns, close pop-ups, and more because of locators.</p>
-    
-    <p>Developers and QA engineers create locators by adding CSS or XPATH IDs to every crucial element in the application. With more locators in an application, automated scripts can evaluate a product more thoroughly.</p>
-    
-    <h4>6- Run, Check, Fix and Run again</h4>
-    <p>If automated correctly, a system will perform all the necessary tests for us and produce a report. However, automated testing only benefits development teams if they use the results effectively.</p>
-    
-    <p>Every team should have procedures for analyzing failing test cases and organizing follow-up actions to fix detected defects. Usually, the time testers need to fix a bug after discovering it takes longer than initially anticipated.</p>
-    
-    <p>One of the best advantages of test automation is its rapid feedback during the early stages of the development lifecycle when developers require less time to fix bugs. With a well-defined process that prioritizes early testing, software development teams can save time and resources if conflicts arise when refining the application.</p>
-    
-    <h4>7- Design Pattern is a must</h4>
-    <p>The QA team must determine the correct design pattern when creating an automation framework for a project. Different projects will use specific patterns depending on the company's goals and strategy.</p>
-    
-    <p>Choosing the ideal design pattern, such as Singleton, Page Object Model, or many others, can help a team create an automation framework aligned with the project's goals.</p>
-    
-    <p>To determine which pattern works best,we must first do the following: 
+    Test automation is a key component of modern software development, and locators are an important part of the process. Locators are often used to identify elements on web pages so automated tests can interact with them. 
 
-        - Understand the project's timeline
-        - Ensure the company's strategy is complete
-        - Understand how the company plans to scale a project
-        - Evaluate how familiar developers and QA engineers are with the design patterns and strategies
-        
-        <h3>What to take away</h3>
-        <p>Automation also improves as technology improves, providing us with new tools to develop high-quality products. Now, many companies include automation testing as an essential step in their QA process. 
-        
-            Following the golden rules above, QA teams can develop a successful automation strategy and create a robust testing environment to help make the highest quality products possible.</p>
+    In this article, we will break down locators in-depth and explain how they work effectively in test automation. 
     
-            <button onclick="redirectToContact()" class="contact-button">Contact me!</button>
+    
+    
+    What is a Locator?
+    A locator allows test automation tools to find elements on web pages. For example, when tested against Google's homepage, the search bar can be identified by its ID (search box) or class name (gfsi). 
+    
+    Once these identifiers have been found, automated tests can interact with them using commands like click() or type(). 
+    
+    Why are Locators important for Automation Engineers? 
+    Locators are important in the code for automation because they allow scripts to identify and interact with specific elements on a webpage. 
+    
+    Locators provide a way to locate elements within an HTML page's DOM (Document Object Model) structure, which is necessary for web applications to be automated. 
+    
+    They also help ensure that tests are reliable and repeatable by providing consistent ways of interacting with web pages regardless of small changes in design or layout.
+    ‍
+    Why are Locators important for Developers?
+    ‍Locators are important for developers to locate and interact with page elements on web pages to create automated tests or perform actions such as clicking buttons or entering text into form fields. 
+    
+    Locators allow developers to target specific elements on the page and write code that interacts with only those elements.‍
+
+    How to improve Locators' quality
+    ‍Let's look at three effective ways to improve the quality of your locators.
+    
+    1. Make sure Locators are unique
+    When creating locators, make sure they are unique enough to target the specific element you want to interact with. If there is more than one element on a page with the same locator, it can be difficult for developers to distinguish between them and ensure that their code interacts with the correct elements. 
+    
+    2. Use descriptive names
+    Assign meaningful names to your locators so that other developers understand what they refer to and don't have to guess or search through the codebase trying to figure out what a particular element does or how it works. This will also make debugging and maintenance easier in the long run. 
+    
+    3. Avoid using absolute paths
+    Absolute paths are not recommended because if any changes occur in an application's UI structure, these paths may no longer be valid, and tests could fail due to this change. 
+    
+    Instead, use relative XPath to identify elements correctly even when minor changes occur within an application's UI structure without modifying existing tests. 
+    ‍
+    
+    What are the different types of Locators?‍
+    One of the most popular types of locators is CSS selectors. These use the same syntax as Cascading Style Sheets (CSS) to identify elements on web pages. 
+    
+    For example, if a test needs to interact with a button, it might find it by its class name (btn-primary) or tag name (button). 
+    
+    Another locator type is an XPath query which uses XML Path Language (XPath) to define the path from one element in an HTML document to another. It can be used for complex interactions like clicking through menus or navigating between frames.
+    
+    Finally, UI Automation libraries provide APIs and tools for interacting with user interfaces without manually creating locators for each element. 
+    
+    These libraries allow tests to interact with elements using their properties instead of relying on manual identification techniques like CSS selectors and XPath queries. 
+    ‍
+    
+    Best Locators type on CSS
+    ‍The best locators for CSS are ID, Class Name, Tag Name, Attribute, and Pseudo-Class. Let's take a look at each.‍
+    
+    ID
+    ‍IDs are the most specific and reliable locators for CSS. They are unique to each element on a page, so they can target a single element without affecting others. ‍
+    
+    Class Name‍
+    Class names can be used to select multiple elements with similar characteristics and are useful when styling several elements at once, such as all buttons or headings in a document. ‍
+    
+    Tag Name
+    ‍Tag names allow you to select an entire group of HTML elements based on their tag name (e.g., p, div, h1). A Tag Name is helpful if you want to style all of the same types of elements within your HTML code. ‍
+    
+    Attribute‍
+    Attributes provide even more specific targeting than class or tag names by allowing you to select an element based on its attributes (e.g., href links). Attributes make it easier for developers to target dynamic content that may frequently change without updating its CSS whenever something changes on the page.
+    ‍
+    
+    The takeaway on Locators‍
+    Locators are essential to automated testing as they allow test automation tools to locate and interact with specific elements on web pages to carry out tests accurately and reliably. 
+    
+    Different locators exist depending on your needs; some rely on identifying individual elements, while others can be used directly against user interfaces via APIs or UI Automation libraries. 
+    
+    While some challenges are associated with automating tests, these can be overcome. By understanding the principles of locators in test automation, organizations can ensure that they can accurately automate their tests and achieve better results overall.
+    
+
+            <h2>April 2023 - Gonzalo Diamend</h2>
+            <button onclick="redirectToContact()" class="contact-button">Back to Articles!</button>
     
   </main>
   <footer>
@@ -193,7 +212,7 @@
   <script>
     function redirectToContact() {
       // Asegúrate de que la URL es accesible y correcta
-      window.location.href = 'contact.html';
+      window.location.href = 'articles.html';
     }
   </script>
   </script>

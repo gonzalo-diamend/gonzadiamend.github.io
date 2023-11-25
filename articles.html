@@ -18,6 +18,12 @@
       flex-direction: column;
       min-height: 100vh;
     }
+    main img {
+      max-width: 30%; /* Ajusta el ancho máximo al 100% del contenedor */
+      height: auto; /* Mantiene la proporción de aspecto original */
+      display: block; /* Hace que la imagen sea un bloque para centrarla */
+      margin: auto; /* Centra la imagen horizontalmente */
+    }
     header {
       background: #bea060;
       color: #030303;
@@ -145,6 +151,36 @@
     .contact-button:active {
       transform: scale(0.95);
     }
+    .articles-section {
+  padding: 1rem; /* Adjust the padding as needed */
+}
+
+    .article-list {
+      list-style: none; /* Removes the default list style */
+      padding-left: 0; /* Removes the default padding */
+    }
+
+    .article-item {
+      margin-bottom: 2rem; /* Space between articles for better readability */
+    }
+
+    .article-link {
+      text-decoration: none; /* Removes underline from links */
+      color: inherit; /* Inherits the text color from the parent element */
+    }
+
+    .article-date, .article-summary {
+      display: block; /* Puts date/summary on a new line */
+      color: #cfcfcf; /* Light grey color for less emphasis */
+    }
+
+    .article-date {
+      font-style: italic; /* Style for the date to differentiate from the title */
+    }
+
+    .article-link:hover h2, .article-link:focus h2 {
+      text-decoration: underline; /* Underline the title when hovered/focused for better UX */
+    }
     @media (max-width: 600px) {
       main {
         padding: 10px;
@@ -183,19 +219,26 @@
     <h1>Articles</h1>
   </header>
   <main>
-    <ul class="article-list">
-      <li>
-        <a href="article1.html">
-          <h2>7 Golden Rules for Test Automation in QA</h2>
-          <p>November 2022 - Rootstrap Blog</p>
-        </a>
-      </li>
-      <li>
-        <a href="article2.html">
-          <h2>Titulo del Artículo 2</h2>
-          <p>Resumen del artículo 2...</p>
-        </a>
-      </li>
+    <section class="articles-section">
+      <ul class="article-list">
+        <li class="article-item">
+          <article>
+            <a href="article1.html" class="article-link">
+              <h2>7 Golden Rules for Test Automation in QA</h2>
+              <img src="https://assets-global.website-files.com/63f902d79a33f7ff016cde0b/63f902d89a33f7608d6ce713_6390a0fd364473f60ae9b403_shutterstock_2131783309.jpeg" alt="Article1 logo">             
+              <p class="article-date">November 2022 - Rootstrap Blog</p>
+            </a>
+          </article>
+        </li>
+        <li class="article-item">
+          <article>
+            <a href="article2.html" class="article-link">
+              <h2>QA: Using Locators for Test Automation</h2>
+              <img src="https://assets-global.website-files.com/63f902d79a33f7ff016cde0b/6453f5943ac6e6e2da111871_6448142dcc97fc4184b38a2e_Automation.jpeg" alt="Article2 logo">             
+              <p class="article-date">April 2023 - Rootstrap Blog</p>
+            </a>
+          </article>
+        </li>
       <!-- Agrega más artículos aquí -->
     </ul>
     <button onclick="redirectToContact()" class="contact-button">Contact me!</button>
