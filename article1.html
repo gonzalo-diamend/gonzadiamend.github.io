@@ -91,6 +91,7 @@
       display: flex;
       justify-content: space-between; /* Añade espacio entre los botones */
       margin-top: 2em; /* Espacio antes de los botones de navegación */
+      margin-bottom: 2em;
     }
 
     .contact-button {
@@ -205,7 +206,7 @@
   <main>
     <div class="article-navigation-buttons">
       <button onclick="window.location.href='articles.html'" class="contact-button">Back to Articles</button>
-      <button onclick="window.location.href='next-article.html'" class="contact-button">Next Article</button>
+      <button onclick="window.location.href='Article2.html'" class="contact-button">Next Article</button>
     </div>
     
     <img src="https://assets-global.website-files.com/63f902d79a33f7ff016cde0b/63f902d89a33f7608d6ce713_6390a0fd364473f60ae9b403_shutterstock_2131783309.jpeg" alt="Article1 logo">
@@ -277,7 +278,7 @@
             <h2>November 2022 - Gonzalo Diamend</h2>
 
     
-    <button onclick="redirectToContact()" class="contact-button">Back to Articles!</button>
+    <button onclick="redirectToContact()" class="contact-button">Contact me!</button>
     
   </main>
   <footer>
@@ -290,7 +291,7 @@
   </footer>
   <script>
     function redirectToContact() {
-      const contactUrl = 'articles.html'; // Replace with the URL of your contact page.
+      const contactUrl = 'contact.html'; // Replace with the URL of your contact page.
       window.location.href = contactUrl;
     }
     function toggleDropdown() {
