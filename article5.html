@@ -206,9 +206,8 @@
   <main>
     <div class="article-navigation-buttons">
       <button onclick="window.location.href='articles.html'" class="contact-button">Back to Articles</button>
-      <button onclick="window.location.href='article2.html'" class="contact-button">Next Article</button>
+      <button onclick="window.location.href='Article2.html'" class="contact-button">Next Article</button>
     </div>
-    
     <img src="https://assets-global.website-files.com/63f902d79a33f7ff016cde0b/63f902d89a33f7608d6ce713_6390a0fd364473f60ae9b403_shutterstock_2131783309.jpeg" alt="Article1 logo">
 
 
@@ -276,7 +275,6 @@
             Following the golden rules above, QA teams can develop a successful automation strategy and create a robust testing environment to help make the highest quality products possible.</p>
 
             <h2>November 2022 - Gonzalo Diamend</h2>
-
     
     <button onclick="redirectToContact()" class="contact-button">Contact me!</button>
     
@@ -288,31 +286,39 @@
       <a href="https://www.instagram.com/gonzadiamend/" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
     <p>Copyright &copy; 2023 Gonzalo Diamend - QA Automation Engineer</p>
-  </footer>
-  <script>
-    function redirectToContact() {
-      const contactUrl = 'contact.html'; // Replace with the URL of your contact page.
-      window.location.href = contactUrl;
-    }
-    function toggleDropdown() {
-      const dropdown = document.getElementById("dropdown");
-      const isHidden = dropdown.style.display === "none" || dropdown.style.display === "";
-    
-      dropdown.style.display = isHidden ? "block" : "none";
-      document.body.classList.toggle("menu-open", !isHidden);
-    }
-    window.onclick = function(event) {
-      const isHamburgerMenu = event.target.matches('.hamburger-menu');
-      const isMenuOpen = document.body.classList.contains('menu-open');
-      
-      if (!isHamburgerMenu && isMenuOpen) {
-        const dropdown = document.getElementById("dropdown");
-        dropdown.style.display = "none";
-        document.body.classList.remove("menu-open");
+    <footer>
+      <div class="footer-icons">
+        <a href="https://www.linkedin.com/in/gonzalodiamend/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/gonzalo-diamend/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/gonzadiamend/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>Copyright &copy; 2023 Gonzalo Diamend - QA Automation Engineer</p>
+    </footer>
+    <script>
+      function redirectToContact() {
+        const contactUrl = 'contact.html'; // Replace with the URL of your contact page.
+        window.location.href = contactUrl;
       }
-    }
+      function toggleDropdown() {
+        const dropdown = document.getElementById("dropdown");
+        const isHidden = dropdown.style.display === "none" || dropdown.style.display === "";
       
-      </script>
-  </script>
-</body>
-</html>
+        dropdown.style.display = isHidden ? "block" : "none";
+        document.body.classList.toggle("menu-open", !isHidden);
+      }
+      window.onclick = function(event) {
+        const isHamburgerMenu = event.target.matches('.hamburger-menu');
+        const isMenuOpen = document.body.classList.contains('menu-open');
+        
+        if (!isHamburgerMenu && isMenuOpen) {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.style.display = "none";
+          document.body.classList.remove("menu-open");
+        }
+      }
+        
+        </script>
+    </script>
+  </body>
+  </html>
+  
