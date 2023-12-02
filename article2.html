@@ -19,7 +19,7 @@
       min-height: 100vh;
     }
     main img {
-      max-width: 50%; /* Ajusta el ancho máximo al 100% del contenedor */
+      max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
       height: auto; /* Mantiene la proporción de aspecto original */
       display: block; /* Hace que la imagen sea un bloque para centrarla */
       margin: auto; /* Centra la imagen horizontalmente */
@@ -87,6 +87,17 @@
       pointer-events: none; /* Desactiva la funcionalidad de clic */
       cursor: default;
     }
+    .article-navigation-buttons {
+      display: flex;
+      justify-content: space-between; /* Añade espacio entre los botones */
+      margin-top: 2em; /* Espacio antes de los botones de navegación */
+      margin-bottom: 2em;
+    }
+
+    .contact-button {
+      /* Tus estilos existentes para .contact-button */
+      margin: 0; /* Remueve márgenes adicionales si es necesario */
+    }
     main {
       padding: 20px;
       flex: 1;
@@ -115,7 +126,7 @@
       margin-bottom: 0.5em;
     }
     .contact-button {
-      background-color:#bea060; 
+      background-color:#bea060;
       color: #050404;
       border: none;
       padding: 10px 20px;
@@ -193,6 +204,10 @@
     <h1>QA: Using Locators for Test Automation</h1>
   </header>
   <main>
+    <div class="article-navigation-buttons">
+      <button onclick="window.location.href='articles.html'" class="contact-button">Back to Articles</button>
+      <button onclick="window.location.href='article3.html'" class="contact-button">Next Article</button>
+    </div>
     <img src="https://assets-global.website-files.com/63f902d79a33f7ff016cde0b/6453f5943ac6e6e2da111871_6448142dcc97fc4184b38a2e_Automation.jpeg" alt="Article2 logo">   
 
     <p>In recent years, automating software quality tests has become widely popular in the tech industry. Current automation tools allow us to confirm that a product meets predefined quality standards for code style, functionality, and user experience.</p>
@@ -271,7 +286,7 @@
     
 
             <h2>April 2023 - Gonzalo Diamend</h2>
-            <button onclick="redirectToContact()" class="contact-button">Back to Articles!</button>
+            <button onclick="redirectToContact()" class="contact-button">Contact me!</button>
     
   </main>
   <footer>
@@ -284,7 +299,7 @@
   </footer>
   <script>
     function redirectToContact() {
-      const contactUrl = 'articles.html'; // Replace with the URL of your contact page.
+      const contactUrl = 'contact.html'; // Replace with the URL of your contact page.
       window.location.href = contactUrl;
     }
     function toggleDropdown() {
